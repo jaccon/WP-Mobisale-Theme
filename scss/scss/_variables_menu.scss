@@ -1,0 +1,11 @@
+$base-color: #334F60;
+$highlight-color: #F29226;
+$notification-color: #F29226;
+$button-color: #F29226;
+
+$icon-color: lighten($base-color, 35%);
+
+$menu-bubble-background: $highlight-color;
+$menu-text: lighten($base-color, 45%);
+$menu-submenu-text: lighten($base-color, 50%);
+$menu-submenu-focus-text: #fff;

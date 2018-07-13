@@ -1,0 +1,261 @@
+@import "_admin_bar.scss";
+
+$bar-height: 50px;
+$bar-width: 90px;
+
+#wpadminbar{
+	height: $bar-height;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.05),0 1px 0 rgba(0,0,0,0.05);
+}
+
+#wp-admin-bar-site-name {
+	> a:before {
+		text-indent: -9999em;
+	}
+	img{
+		float: left !important;
+		height: 32px !important;
+		+ span{
+			margin-left: 10px !important;
+		}
+	}
+	span{
+		font-size: 16px;
+		font-weight: 100;
+	}
+}
+
+#wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img{
+	border-width: 0;
+	border-radius: 100%;
+	width: 32px;
+	height: 32px;
+}
+
+#wpadminbar #wp-admin-bar-my-account.with-avatar #wp-admin-bar-user-actions>li{
+	margin-left: 16px;
+}
+
+#wp-admin-bar-user-info .avatar{
+	display: none;
+}
+
+#adminmenu a.menu-top{
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wp-menu-separator{
+	display: none;
+}
+
+.box{
+	position: relative;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	h3{
+		padding: 15px;
+		margin: 0;
+		cursor: pointer;
+	}
+	h4{
+		font-size: 13px;
+		padding: 15px;
+		margin: 0;
+		line-height: 1;		
+		background: #fafafa;
+		cursor: pointer;
+	}
+	h4:hover{
+		border:1px solid #999;
+		margin: -1px -1px 0 -1px;
+		padding-bottom: 14px;
+	}
+	h4.sm{
+		padding: 10px;
+		background: #fff;
+	}
+	h4.sm:hover{
+		padding-bottom: 9px;
+	}
+	.box-body{
+		padding: 0 15px;
+	}
+	.b-t{
+		border-top: 1px solid #eee;
+	}	
+}
+
+.bg{
+	background-color: #fafafa;
+}
+.bg-white{
+	background-color: #fff;
+}
+
+.text-sm{
+	font-size: 13px !important;
+}
+.no-m-t{
+	margin-top: 0;
+}
+.m-b{
+	margin-bottom: 10px;
+}
+.text-muted{
+	color: #ccc;
+}
+.text-l-t{
+	text-decoration: line-through;
+}
+.pull-right{
+	float: right;
+}
+.clearfix:before,
+.clearfix:after{
+	display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+
+.hide{
+	display: none;
+}
+
+.show{
+	display: inherit;
+}
+
+@media screen and (max-width: 782px) {
+	#wp-admin-bar-site-name {
+		img {
+			display: none;
+		}
+	}
+}
+
+@mixin fold( $fold-name ) {
+	.#{$fold-name} {
+		#adminmenu, 
+		#adminmenu li.menu-top, 
+		#adminmenuback, 
+		#adminmenuwrap{
+			width: $bar-width;
+		}
+
+		#wpcontent, 
+		#wpfooter{
+			margin-left: $bar-width;
+			padding-left: 20px;
+		}
+
+		#adminmenu .wp-submenu.sub-open,
+		#adminmenu .opensub .wp-submenu,
+		#adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+		#adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+		#adminmenu a.menu-top:focus + .wp-submenu,
+		#adminmenu .wp-has-current-submenu a.menu-top:focus + .wp-submenu  {
+			top: 0px;
+			left: $bar-width;
+		}
+
+		#adminmenu .wp-menu-name{
+			display: block;
+			text-align: center;
+			font-size: 11px;
+			padding: 4px 0 10px 0;
+			position: static;
+			left: 0;
+		}
+
+		#adminmenu a.menu-top{
+			height: auto;
+			border: none;
+		}
+
+		#adminmenu div.wp-menu-image{
+			position: relative;
+			float: none;
+			width: auto;
+			text-align: center;
+			padding: 4px 0;
+			font-size: 20px !important;
+		}
+
+		#adminmenu div.wp-menu-image:before{
+			font-size: 28px;
+			width: 28px;
+			height: 28px;
+		}
+
+		#adminmenu .wp-submenu-head{
+			display: none;
+		}
+
+		#collapse-button,
+		#collapse-button div{
+			float: none;
+			width: auto;
+		}
+
+		#adminmenu > li > a .update-plugins,
+		#adminmenu > li > a .awaiting-mod{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.row{
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.col{
+		padding-left: 15px;
+		padding-right: 15px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		float: left;
+	}
+	.col-3{
+		width: 25%;
+	}
+	.col-4{
+		width: 33.33%;
+	}
+	.col-6{
+		width: 50%;
+	}
+	.col-8{
+		width: 66.66%;
+	}
+	.col-9{
+		width: 75%;
+	}
+
+}
+
+@media screen and (min-width: 783px) {
+	html.wp-toolbar{
+		padding-top: $bar-height;
+	}
+
+	#wpadminbar .quicklinks > ul > li > a{
+		padding: ($bar-height - 32)/2 10px !important;
+	}
+}
+
+@media screen and (min-width: 783px) {
+	@include fold("folded");
+}
+
+@media (min-width: 783px) and (max-width: 960px) {
+	@include fold("auto-fold");
+}

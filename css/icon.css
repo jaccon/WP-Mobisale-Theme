@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+  url('../fonts/glyphicons-halflings-regular.woff') format('woff'), 
+  url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+  url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.dashicons-dashboard:before,
+.dashicons-admin-post:before,
+.dashicons-admin-media:before,
+.dashicons-admin-page:before,
+.dashicons-admin-comments:before,
+.dashicons-admin-appearance:before,
+.dashicons-admin-plugins:before,
+.dashicons-admin-users:before,
+.dashicons-admin-tools:before,
+.dashicons-admin-settings:before,
+.dashicons-admin-generic:before{
+	font-family: 'Glyphicons Halflings';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	height: 16px;
+}
+
+.dashicons-dashboard:before {
+	content: "\e185";
+}
+.dashicons-admin-post:before {
+	content: "\e146";
+}
+.dashicons-admin-media:before {
+	content: "\e046";
+}
+.dashicons-admin-page:before {
+	content: "\e022";
+}
+.dashicons-admin-comments:before {
+	content: "\e111";
+}
+.dashicons-admin-appearance:before {
+	content: "\e064";
+}
+.dashicons-admin-plugins:before {
+	content: "\e178";
+}
+.dashicons-admin-users:before {
+	content: "\e008";
+}
+.dashicons-admin-tools:before {
+	content: "\e136";
+}
+.dashicons-admin-settings:before {
+	content: "\e019";
+}
+.dashicons-admin-generic:before {
+  content: "\e165";
+}
+
+#adminmenu div.wp-menu-image:before{
+  padding: 9px 0;
+}
+
+@media screen and (min-width: 783px) {
+  .folded #adminmenu div.dashicons-dashboard:before,
+  .folded #adminmenu div.dashicons-admin-post:before,
+  .folded #adminmenu div.dashicons-admin-media:before,
+  .folded #adminmenu div.dashicons-admin-page:before,
+  .folded #adminmenu div.dashicons-admin-comments:before,
+  .folded #adminmenu div.dashicons-admin-appearance:before,
+  .folded #adminmenu div.dashicons-admin-plugins:before,
+  .folded #adminmenu div.dashicons-admin-users:before,
+  .folded #adminmenu div.dashicons-admin-tools:before,
+  .folded #adminmenu div.dashicons-admin-settings:before,
+  .folded #adminmenu div.dashicons-admin-generic:before{
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (min-width: 783px) and (max-width: 960px) {
+  .auto-fold #adminmenu div.dashicons-dashboard:before,
+  .auto-fold #adminmenu div.dashicons-admin-post:before,
+  .auto-fold #adminmenu div.dashicons-admin-media:before,
+  .auto-fold #adminmenu div.dashicons-admin-page:before,
+  .auto-fold #adminmenu div.dashicons-admin-comments:before,
+  .auto-fold #adminmenu div.dashicons-admin-appearance:before,
+  .auto-fold #adminmenu div.dashicons-admin-plugins:before,
+  .auto-fold #adminmenu div.dashicons-admin-users:before,
+  .auto-fold #adminmenu div.dashicons-admin-tools:before,
+  .auto-fold #adminmenu div.dashicons-admin-settings:before,
+  .auto-fold #adminmenu div.dashicons-admin-generic:before{
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
